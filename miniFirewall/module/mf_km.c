@@ -287,6 +287,7 @@ static struct file_operations mf_ps_op = {
     .write 	= mf_proc_write,
 };
 
+//Code running starts from here
 int init_module(void)
 {
     printk(KERN_INFO "mk_mf: initialize kernel module\n");
@@ -310,6 +311,7 @@ int init_module(void)
     return 0;
 }
 
+//Clear Rule List
 void cleanup_module(void)
 {
     struct list_head *p, *q;
